@@ -22,9 +22,9 @@
     "build": "babel lib/ -d dist/ --source-maps --ignore '**/*.test.js' --delete-dir-on-start",
     "format": "prettier --write '**/*.*' && eslint . --fix",
     "lint": "prettier --check '**/*.*' && eslint .",
-    "prepare": "yarn build",
+    "prepare": "npm build",
     "semantic-release": "semantic-release",
-    "test": "jest --coverage && yarn lint"
+    "test": "jest --coverage"
   },
   "babel": {
     "presets": [
@@ -72,7 +72,9 @@
     }
   },
   "jest": {},
-  "dependencies": {},
+  "dependencies": {
+    "axios": "^0.19.2"
+  },
   "devDependencies": {
     "@babel/cli": "7.10.5",
     "@babel/core": "7.11.1",
